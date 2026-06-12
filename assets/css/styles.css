@@ -1,0 +1,281 @@
+/* =========================================================
+   PERFIL METAIS — Nova Identidade Visual (proposta)
+   Design system: industrial / molten steel
+   ========================================================= */
+
+:root {
+  /* Base — aço / graphite */
+  --ink: #0a0c0f;
+  --steel-950: #0e1116;
+  --steel-900: #14181d;
+  --steel-800: #1b2026;
+  --steel-700: #262c34;
+  --steel-600: #353d47;
+  --steel-500: #5a6472;
+  --steel-400: #8b94a1;
+  --steel-300: #c2c8d0;
+
+  /* Acento — molten / laser */
+  --molten: #da3034;
+  --molten-2: #ff373a;
+  --spark: #ff5f20;
+  --ember: #66292a;
+
+  /* Superfícies claras */
+  --paper: #f5f3ef;
+  --paper-2: #ece8e1;
+
+  /* Linhas / vidro */
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --line-dark: rgba(10, 12, 15, 0.1);
+
+  --shadow-lg: 0 40px 80px -30px rgba(0, 0, 0, 0.65);
+  --shadow-card: 0 24px 60px -28px rgba(0, 0, 0, 0.5);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  background: var(--ink);
+  color: var(--steel-300);
+  font-family: "Manrope", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+::selection { background: var(--molten); color: #fff; }
+
+/* ---------- Tipografia utilitária ---------- */
+.font-display { font-family: "Archivo Expanded", "Archivo", sans-serif; }
+.font-head { font-family: "Archivo", sans-serif; }
+.font-mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
+
+.eyebrow {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--molten);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.eyebrow::before {
+  content: "";
+  width: 1.6rem;
+  height: 1px;
+  background: var(--molten);
+  display: inline-block;
+}
+
+.display-xl {
+  font-family: "Archivo Expanded", "Archivo", sans-serif;
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.text-gradient {
+  background: linear-gradient(100deg, var(--molten) 0%, var(--spark) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1.4px rgba(255, 255, 255, 0.55);
+  color: transparent;
+}
+.text-stroke-dark {
+  -webkit-text-stroke: 1.4px rgba(10, 12, 15, 0.35);
+  color: transparent;
+}
+
+/* ---------- Atmosfera / texturas ---------- */
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9990;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.grid-lines {
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.radial-glow {
+  background: radial-gradient(60% 60% at 50% 0%, rgba(255, 90, 31, 0.18), transparent 70%);
+}
+
+/* ---------- Botões ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.95rem 1.6rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s var(--ease-out), color 0.3s, background 0.3s, border-color 0.3s;
+  will-change: transform;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-primary { background: var(--molten); color: #0a0c0f; font-weight: 600; }
+.btn-primary:hover { background: var(--spark); }
+.btn-ghost { border: 1px solid var(--line-strong); color: #fff; }
+.btn-ghost:hover { border-color: var(--molten); color: var(--molten); }
+.btn-dark { background: var(--ink); color: #fff; }
+.btn-dark:hover { background: var(--steel-800); }
+
+.btn .arrow { transition: transform 0.35s var(--ease-out); }
+.btn:hover .arrow { transform: translateX(4px); }
+
+/* ---------- Cartões ---------- */
+.card-line {
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0));
+  transition: border-color 0.4s, transform 0.4s var(--ease-out), background 0.4s;
+}
+.card-line:hover {
+  border-color: rgba(255, 90, 31, 0.5);
+  transform: translateY(-6px);
+}
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  transition: transform 0.5s var(--ease-out), border-color 0.5s;
+}
+.product-card img {
+  transition: transform 0.7s var(--ease-out), filter 0.5s;
+}
+.product-card:hover { border-color: rgba(255, 90, 31, 0.6); }
+.product-card:hover img { transform: scale(1.08); }
+
+/* fallback de imagem (caso a foto não carregue) */
+.img-fallback {
+  background:
+    linear-gradient(135deg, var(--steel-800), var(--steel-950)),
+    repeating-linear-gradient(45deg, rgba(255, 90, 31, 0.05) 0 12px, transparent 12px 24px);
+  background-blend-mode: overlay;
+}
+
+/* ---------- Diagonais (eco da referência Shining) ---------- */
+.clip-diagonal-b { clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%); }
+.clip-diagonal-t { clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%); }
+
+/* ---------- Marquee ---------- */
+.marquee { display: flex; overflow: hidden; user-select: none; }
+.marquee__track {
+  display: flex;
+  flex-shrink: 0;
+  gap: 3rem;
+  padding-right: 3rem;
+  animation: marquee 32s linear infinite;
+}
+.marquee:hover .marquee__track { animation-play-state: paused; }
+@keyframes marquee {
+  to { transform: translateX(-100%); }
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  transition: background 0.4s, backdrop-filter 0.4s, border-color 0.4s, padding 0.4s;
+  border-bottom: 1px solid transparent;
+}
+.site-header.is-scrolled {
+  background: rgba(10, 12, 15, 0.82);
+  backdrop-filter: blur(14px);
+  border-bottom-color: var(--line);
+}
+.nav-link { position: relative; }
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -4px;
+  width: 0; height: 2px;
+  background: var(--molten);
+  transition: width 0.35s var(--ease-out);
+}
+.nav-link:hover::after,
+.nav-link.is-active::after { width: 100%; }
+.nav-link.is-active { color: #fff; }
+
+/* mobile menu */
+.mobile-menu {
+  transition: opacity 0.4s, visibility 0.4s;
+}
+.mobile-menu[data-open="false"] { opacity: 0; visibility: hidden; pointer-events: none; }
+.mobile-menu[data-open="true"] { opacity: 1; visibility: visible; }
+
+/* ---------- Reveal ----------
+   A ocultação inicial é feita pelo GSAP (gsap.from + immediateRender),
+   não pelo CSS — assim, se o JS falhar, o conteúdo permanece visível. */
+
+/* ---------- Cursor custom (desktop) ---------- */
+.cursor-dot, .cursor-ring {
+  position: fixed;
+  top: 0; left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  translate: -50% -50%;
+}
+.cursor-dot { width: 6px; height: 6px; background: #fff; }
+.cursor-ring {
+  width: 38px; height: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  transition: width 0.3s, height 0.3s, background 0.3s;
+}
+.cursor-ring.is-hover { width: 60px; height: 60px; background: rgba(255, 90, 31, 0.15); }
+@media (max-width: 1024px) {
+  .cursor-dot, .cursor-ring { display: none; }
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--steel-950); }
+::-webkit-scrollbar-thumb { background: var(--steel-700); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--molten); }
+
+/* ---------- Lenis ---------- */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+/* ---------- Acessibilidade ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track { animation: none; }
+  * { scroll-behavior: auto !important; }
+}
+
+a, button { outline-color: var(--molten); }
+
+/* utilitário de número grande de seção */
+.section-index {
+  font-family: "Archivo Expanded", sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--line-strong);
+}

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil Metais — Soluções confiáveis em ferro e aço</title>
+  <link rel="shortcut icon" href="https://www.perfilmetais.ind.br/favicon.ico" type="image/x-icon">
+  <meta name="description" content="Desde 1992, a Perfil Metais distribui chapas, tubos, laminados, telhas sob medida e perfis estruturais, com serviços de corte a laser, dobra e calandra. Soluções confiáveis em ferro e aço." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Expanded:wght@600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#0a0c0f",
+            steel: {
+              950: "#0e1116", 900: "#14181d", 800: "#1b2026", 700: "#262c34",
+              600: "#353d47", 500: "#5a6472", 400: "#8b94a1", 300: "#c2c8d0",
+            },
+            molten: "#ff5a1f",
+            molten2: "#ff7a32",
+            spark: "#ffb020",
+            paper: "#f5f3ef",
+          },
+          fontFamily: {
+            display: ['"Archivo Expanded"', '"Archivo"', "sans-serif"],
+            head: ['"Archivo"', "sans-serif"],
+            sans: ['"Manrope"', "system-ui", "sans-serif"],
+            mono: ['"JetBrains Mono"', "monospace"],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="grain antialiased">
+
+  <!-- ===================== HEADER ===================== -->
+  <header data-header class="site-header fixed top-0 inset-x-0 z-50 py-5">
+    <div class="mx-auto max-w-[1400px] px-5 lg:px-8 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group" aria-label="Perfil Metais — início"> 
+          <img src="assets/img/logo-branca.png" alt="Perfil Metais" class="h-14">
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-9 font-mono text-[0.78rem] tracking-wide text-steel-300">
+        <a href="index.html" class="nav-link is-active">Início</a>
+        <a href="empresa.html" class="nav-link">A Empresa</a>
+        <a href="produtos.html" class="nav-link">Produtos</a>
+        <a href="servicos.html" class="nav-link">Serviços</a>
+        <a href="contato.html" class="nav-link">Contato</a>
+      </nav>
+
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="https://wa.me/5554999097467" target="_blank" rel="noopener" class="btn btn-ghost">WhatsApp</a>
+        <a href="orcamento.html" class="btn btn-primary">Orçamento <span class="arrow">→</span></a>
+      </div>
+
+      <button data-burger aria-label="Abrir menu" aria-expanded="false" class="lg:hidden relative w-10 h-10 grid place-items-center text-white">
+        <span class="block w-6 h-px bg-white mb-1.5"></span>
+        <span class="block w-6 h-px bg-white"></span>
+        <span class="block w-6 h-px bg-white mt-1.5"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div data-mobile-menu data-open="false" class="mobile-menu fixed inset-0 z-40 bg-ink/97 backdrop-blur-lg lg:hidden flex flex-col">
+    <div class="grid-lines absolute inset-0 opacity-40"></div>
+    <div class="relative flex flex-col justify-center flex-1 px-8 gap-2">
+      <a href="index.html" class="font-display text-4xl font-extrabold text-white py-2 border-b border-steel-800">Início</a>
+      <a href="empresa.html" class="font-display text-4xl font-extrabold text-steel-400 py-2 border-b border-steel-800">A Empresa</a>
+      <a href="produtos.html" class="font-display text-4xl font-extrabold text-steel-400 py-2 border-b border-steel-800">Produtos</a>
+      <a href="servicos.html" class="font-display text-4xl font-extrabold text-steel-400 py-2 border-b border-steel-800">Serviços</a>
+      <a href="contato.html" class="font-display text-4xl font-extrabold text-steel-400 py-2 border-b border-steel-800">Contato</a>
+      <div class="flex gap-3 mt-8">
+        <a href="orcamento.html" class="btn btn-primary flex-1 justify-center">Orçamento</a>
+        <a href="https://wa.me/5554999097467" class="btn btn-ghost flex-1 justify-center">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="relative min-h-[100svh] flex items-end overflow-hidden">
+      <div class="absolute inset-0 img-fallback">
+        <img src="https://images.unsplash.com/photo-1714504904786-b6732390b206?auto=format&fit=crop&w=2000&q=80"
+          onerror="this.style.display='none'" alt=""
+          class="w-full h-full object-cover opacity-45" data-parallax="0.15" />
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/30"></div>
+      <div class="absolute inset-0 grid-lines opacity-30"></div>
+      <div class="absolute inset-0 radial-glow"></div>
+
+      <!-- índice lateral -->
+      <div class="hidden lg:block absolute right-8 top-1/2 -translate-y-1/2 font-mono text-[0.7rem] tracking-[0.3em] text-steel-500 [writing-mode:vertical-rl]">
+        SOLUÇÕES EM FERRO &amp; AÇO
+      </div>
+
+      <div class="relative mx-auto max-w-[1400px] w-full px-5 lg:px-8 pb-20 pt-32">
+        <p data-hero-eyebrow class="eyebrow mb-6">Distribuição &amp; transformação de metais</p>
+
+        <h1 class="display-xl text-white text-[14vw] sm:text-[10vw] lg:text-[5.5rem] max-w-5xl">
+          <span data-hero-line class="block">Soluções</span>
+          <span data-hero-line class="block">confiáveis em</span>
+          <span data-hero-line class="block text-gradient">ferro &amp; aço</span>
+        </h1>
+
+        <p data-hero-sub class="mt-8 max-w-xl text-steel-300 text-lg leading-relaxed">
+          Desde 1992 abastecemos o mercado com chapas, tubos, laminados, telhas sob medida,
+          calhas e perfis estruturais — com corte de precisão e entrega ágil no Sul e Centro-Oeste.
+        </p>
+
+        <div data-hero-cta class="mt-10 flex flex-wrap gap-4">
+          <a href="produtos.html" class="btn btn-primary">Conheça os produtos <span class="arrow">→</span></a>
+          <a href="#catalogo" class="btn btn-ghost">Baixe o catálogo</a>
+        </div>
+
+        <div data-hero-meta class="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-px bg-steel-800 border border-steel-800 max-w-3xl">
+          <div class="bg-ink p-5">
+            <div class="font-display text-3xl font-extrabold text-white">1992</div>
+            <div class="font-mono text-[0.65rem] tracking-widest text-steel-400 mt-1">FUNDAÇÃO</div>
+          </div>
+          <div class="bg-ink p-5">
+            <div class="font-display text-3xl font-extrabold text-white">04</div>
+            <div class="font-mono text-[0.65rem] tracking-widest text-steel-400 mt-1">UNIDADES</div>
+          </div>
+          <div class="bg-ink p-5">
+            <div class="font-display text-3xl font-extrabold text-white">04</div>
+            <div class="font-mono text-[0.65rem] tracking-widest text-steel-400 mt-1">ESTADOS</div>
+          </div>
+          <div class="bg-ink p-5">
+            <div class="font-display text-3xl font-extrabold text-molten">100%</div>
+            <div class="font-mono text-[0.65rem] tracking-widest text-steel-400 mt-1">FROTA PRÓPRIA</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MARQUEE ===================== 
+    <section class="bg-molten text-ink py-5 border-y border-ink/10">
+      <div class="marquee font-display font-extrabold text-xl tracking-tight uppercase">
+        <div class="marquee__track" aria-hidden="false">
+          <span>Corte a Laser</span><span class="opacity-50">✦</span>
+          <span>Corte a Plasma</span><span class="opacity-50">✦</span>
+          <span>Oxicorte</span><span class="opacity-50">✦</span>
+          <span>Corte &amp; Dobra de Chapas</span><span class="opacity-50">✦</span>
+          <span>Calandra</span><span class="opacity-50">✦</span>
+          <span>Metaleira</span><span class="opacity-50">✦</span>
+          <span>Desbobinamento</span><span class="opacity-50">✦</span>
+        </div>
+        <div class="marquee__track" aria-hidden="true">
+          <span>Corte a Laser</span><span class="opacity-50">✦</span>
+          <span>Corte a Plasma</span><span class="opacity-50">✦</span>
+          <span>Oxicorte</span><span class="opacity-50">✦</span>
+          <span>Corte &amp; Dobra de Chapas</span><span class="opacity-50">✦</span>
+          <span>Calandra</span><span class="opacity-50">✦</span>
+          <span>Metaleira</span><span class="opacity-50">✦</span>
+          <span>Desbobinamento</span><span class="opacity-50">✦</span>
+        </div>
+      </div>
+    </section>
+    
+    -->
+
+    <!-- ===================== A EMPRESA ===================== -->
+    <section class="relative bg-paper text-ink py-24 lg:py-32 overflow-hidden" data-parallax-scope>
+      <div class="mx-auto max-w-[1400px] px-5 lg:px-8 grid lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6" data-reveal="right">
+          <p class="eyebrow mb-6">A empresa</p>
+          <h2 class="font-display font-extrabold text-4xl lg:text-6xl leading-[0.95] tracking-tight mb-8">
+            Metais que movem<br />projetos e progresso.
+          </h2>
+          <p class="text-steel-600 text-lg leading-relaxed mb-5">
+            Inaugurada em <strong class="text-ink">1992, em Erechim (RS)</strong>, a Perfil Metais atua no
+            Rio Grande do Sul, Santa Catarina, Paraná e Mato Grosso. Atende do serralheiro às grandes
+            obras e indústrias — no atacado e no varejo.
+          </p>
+          <p class="text-steel-600 text-lg leading-relaxed mb-8">
+            Com frota própria e rotas definidas, oferece uma linha diversificada de chapas, tubos,
+            laminados, telhas metálicas sob medida, acessórios, calhas e perfis estruturais, além de
+            serviço especializado em corte e dobra de chapas com precisão.
+          </p>
+          <a href="empresa.html" class="btn btn-dark">Conheça a empresa <span class="arrow">→</span></a>
+        </div>
+
+        <div class="lg:col-span-6 relative" data-reveal="left">
+          <div class="relative aspect-[4/5] img-fallback overflow-hidden">
+            <img src="https://www.perfilmetais.ind.br/site/images/fachada.jpg"
+              onerror="this.style.display='none'" alt="Indústria metalúrgica"
+              class="w-full h-full object-cover object-right" data-parallax="-0.12" />
+          </div>
+          <div class="absolute -bottom-6 -left-6 bg-ink text-white p-6 max-w-[220px] shadow-xl hidden sm:block">
+            <div class="font-display text-5xl font-extrabold text-molten"><span data-count="34">0</span></div>
+            <div class="font-mono text-[0.7rem] tracking-widest text-steel-400 mt-2">ANOS DE ESTRADA NO MERCADO DO AÇO</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== STATS ===================== -->
+    <section class="bg-ink py-16 border-y border-steel-800">
+      <div class="mx-auto max-w-[1400px] px-5 lg:px-8 grid grid-cols-2 lg:grid-cols-4 gap-px bg-steel-800" data-reveal-stagger>
+        <div class="bg-ink p-8">
+          <div class="font-display text-5xl font-extrabold text-white"><span data-count="34">0</span><span class="text-molten">+</span></div>
+          <div class="font-mono text-[0.7rem] tracking-widest text-steel-400 mt-3">ANOS DE EXPERIÊNCIA</div>
+        </div>
+        <div class="bg-ink p-8">
+          <div class="font-display text-5xl font-extrabold text-white"><span data-count="16">0</span></div>
+          <div class="font-mono text-[0.7rem] tracking-widest text-steel-400 mt-3">LINHAS DE PRODUTOS</div>
+        </div>
+        <div class="bg-ink p-8">
+          <div class="font-display text-5xl font-extrabold text-white"><span data-count="6">0</span></div>
+          <div class="font-mono text-[0.7rem] tracking-widest text-steel-400 mt-3">SERVIÇOS DE CORTE</div>
+        </div>
+        <div class="bg-ink p-8">
+          <div class="font-display text-5xl font-extrabold text-white"><span data-count="4">0</span></div>
+          <div class="font-mono text-[0.7rem] tracking-widest text-steel-400 mt-3">UNIDADES / ESTADOS</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PRODUTOS ===================== -->
+    <section class="bg-steel-950 py-24 lg:py-32 relative overflow-hidden">
+      <div class="mx-auto max-w-[1400px] px-5 lg:px-8">
+        <div class="flex flex-wrap items-end justify-between gap-6 mb-14" data-reveal>
+          <div>
+            <p class="eyebrow mb-5">Nossos produtos</p>
+            <h2 class="font-display font-extrabold text-4xl lg:text-6xl text-white leading-[0.95] tracking-tight">
+              Linha completa<br />em ferro &amp; aço
+            </h2>
+          </div>
+          <a href="produtos.html" class="btn btn-ghost">Ver todos os produtos <span class="arrow">→</span></a>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4" data-reveal-stagger>
+          <!-- card -->
+          <a href="produto.html?p=chapas" class="product-card group block aspect-[4/3] img-fallback">
+            <img src="https://www.perfilmetais.ind.br/painel/admin/upload/produtos/des_132_chapas.jpg" onerror="this.style.display='none'" alt="Chapas" class="absolute inset-0 w-full h-full object-cover opacity-60" />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent"></div>
+            <div class="relative h-full flex flex-col justify-between p-6">
+              <span class="font-mono text-xs text-molten">01</span>
+              <div>
+                <h3 class="font-display font-bold text-2xl text-white">Chapas</h3>
+                <span class="font-mono text-xs text-steel-400 group-hover:text-molten transition">Ver linha →</span>
+              </div>
+            </div>
+          </a>
+          <a href="produto.html?p=tubos" class="product-card group block aspect-[4/3] img-fallback">
+            <img src="https://www.perfilmetais.ind.br/painel/admin/upload/produtos/des_126_tubos2.jpg" onerror="this.style.display='none'" alt="Tubos" class="absolute inset-0 w-full h-full object-cover opacity-60" />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent"></div>
+            <div class="relative h-full flex flex-col justify-between p-6">
+              <span class="font-mono text-xs text-molten">02</span>
+              <div>
+                <h3 class="font-display font-bold text-2xl text-white">Tubos</h3>
+                <span class="font-mono text-xs text-steel-400 group-hover:text-molten transition">Ver linha →</span>
+              </div>
+            </div>
+          </a>
+          <a href="produto.html?p=telhas" class="product-card group block aspect-[4/3] img-fallback">
+            <img src="https://www.perfilmetais.ind.br/painel/admin/upload/produtos/des_139_TELHAS03.jpg" onerror="this.style.display='none'" alt="Telhas" class="absolute inset-0 w-full h-full object-cover opacity-60" />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent"></div>
+            <div class="relative h-full flex flex-col justify-between p-6">
+              <span class="font-mono text-xs text-molten">03</span>
+              <div>
+                <h3 class="font-display font-bold text-2xl text-white">Telhas sob medida</h3>
+                <span class="font-mono text-xs text-steel-400 group-hover:text-molten transition">Ver linha →</span>
+              </div>
+            </div>
+          </a>
+          <a href="produto.html?p=perfil-estrutural" class="product-card group block aspect-[4/3] img-fallback">
+            <img src="https://www.perfilmetais.ind.br/painel/admin/upload/produtos/des_135_estrutural.jpg" onerror="this.style.display='none'" alt="Perfis estruturais" class="absolute inset-0 w-full h-full object-cover opacity-50" />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent"></div>
+            <div class="relative h-full flex flex-col justify-between p-6">
+              <span class="font-mono text-xs text-molten">04</span>
+              <div>
+                <h3 class="font-display font-bold text-2xl text-white">Perfis estruturais</h3>
+                <span class="font-mono text-xs text-steel-400 group-hover:text-molten transition">Ver linha →</span>
+              </div>
+            </div>
+          </a>
+          <a href="produto.html?p=inox" class="product-card group block aspect-[4/3] img-fallback">
+            <img src="https://www.perfilmetais.ind.br/painel/admin/upload/produtos/des_138_p_tubos-de-aco-inox-11.jpg" onerror="this.style.display='none'" alt="Inox" class="absolute inset-0 w-full h-full object-cover opacity-55" />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent"></div>
+            <div class="relative h-full flex flex-col justify-between p-6">
+              <span class="font-mono text-xs text-molten">05</span>
+              <div>
+                <h3 class="font-display font-bold text-2xl text-white">Inox</h3>
+                <span class="font-mono text-xs text-steel-400 group-hover:text-molten transition">Ver linha →</span>
+              </div>
+            </div>
+          </a>
+          <a href="produtos.html" class="product-card group block aspect-[4/3] bg-molten">
+            <div class="relative h-full flex flex-col justify-between p-6 text-ink">
+              <span class="font-mono text-xs">+ 7 categorias</span>
+              <div>
+                <h3 class="font-display font-bold text-2xl">Acessórios, ACM, Bobinas, Calhas, Laminados, Perfis especiais…</h3>
+                <span class="font-mono text-xs font-semibold mt-2 inline-block">Ver catálogo completo →</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVIÇOS ===================== -->
+    <section class="relative bg-ink py-24 lg:py-32 overflow-hidden" data-parallax-scope>
+      <div class="absolute inset-0 img-fallback opacity-25">
+        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1600&q=80" onerror="this.style.display='none'" alt="" class="w-full h-full object-cover" data-parallax="0.1" />
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-b from-ink via-ink/85 to-ink"></div>
+
+      <div class="relative mx-auto max-w-[1400px] px-5 lg:px-8">
+        <div class="max-w-2xl mb-16" data-reveal>
+          <p class="eyebrow mb-5">Nossos serviços</p>
+          <h2 class="font-display font-extrabold text-4xl lg:text-6xl text-white leading-[0.95] tracking-tight">
+            Corte e transformação<br />com precisão industrial
+          </h2>
+        </div>
+
+        <div class="border-t border-steel-800" data-reveal-stagger>
+          <a href="servicos.html" class="group flex items-center gap-6 py-7 border-b border-steel-800 hover:px-4 transition-all duration-300">
+            <span class="font-mono text-sm text-steel-500 w-10">01</span>
+            <h3 class="font-display font-bold text-2xl lg:text-4xl text-steel-300 group-hover:text-white transition flex-1">Corte a Laser</h3>
+            <span class="text-molten opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all text-2xl">→</span>
+          </a>
+          <a href="servicos.html" class="group flex items-center gap-6 py-7 border-b border-steel-800 hover:px-4 transition-all duration-300">
+            <span class="font-mono text-sm text-steel-500 w-10">02</span>
+            <h3 class="font-display font-bold text-2xl lg:text-4xl text-steel-300 group-hover:text-white transition flex-1">Corte a Plasma e Oxicorte</h3>
+            <span class="text-molten opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all text-2xl">→</span>
+          </a>
+          <a href="servicos.html" class="group flex items-center gap-6 py-7 border-b border-steel-800 hover:px-4 transition-all duration-300">
+            <span class="font-mono text-sm text-steel-500 w-10">03</span>
+            <h3 class="font-display font-bold text-2xl lg:text-4xl text-steel-300 group-hover:text-white transition flex-1">Corte e Dobra de Chapas</h3>
+            <span class="text-molten opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all text-2xl">→</span>
+          </a>
+          <a href="servicos.html" class="group flex items-center gap-6 py-7 border-b border-steel-800 hover:px-4 transition-all duration-300">
+            <span class="font-mono text-sm text-steel-500 w-10">04</span>
+            <h3 class="font-display font-bold text-2xl lg:text-4xl text-steel-300 group-hover:text-white transition flex-1">Calandra</h3>
+            <span class="text-molten opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all text-2xl">→</span>
+          </a>
+          <a href="servicos.html" class="group flex items-center gap-6 py-7 border-b border-steel-800 hover:px-4 transition-all duration-300">
+            <span class="font-mono text-sm text-steel-500 w-10">05</span>
+            <h3 class="font-display font-bold text-2xl lg:text-4xl text-steel-300 group-hover:text-white transition flex-1">Metaleira</h3>
+            <span class="text-molten opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all text-2xl">→</span>
+          </a>
+          <a href="servicos.html" class="group flex items-center gap-6 py-7 border-b border-steel-800 hover:px-4 transition-all duration-300">
+            <span class="font-mono text-sm text-steel-500 w-10">06</span>
+            <h3 class="font-display font-bold text-2xl lg:text-4xl text-steel-300 group-hover:text-white transition flex-1">Desbobinamento de Chapas</h3>
+            <span class="text-molten opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all text-2xl">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DIFERENCIAIS ===================== -->
+    <section class="bg-steel-950 py-24 border-t border-steel-800">
+      <div class="mx-auto max-w-[1400px] px-5 lg:px-8 grid lg:grid-cols-3 gap-px bg-steel-800 border border-steel-800" data-reveal-stagger>
+        <div class="bg-steel-950 p-10">
+          <div class="w-12 h-12 grid place-items-center border border-molten/40 text-molten mb-6 font-mono">01</div>
+          <h3 class="font-head font-bold text-xl text-white mb-3">Atacado &amp; varejo</h3>
+          <p class="text-steel-400 leading-relaxed">Do serralheiro com pequenas quantidades às grandes obras e indústrias — atendemos todos os portes.</p>
+        </div>
+        <div class="bg-steel-950 p-10">
+          <div class="w-12 h-12 grid place-items-center border border-molten/40 text-molten mb-6 font-mono">02</div>
+          <h3 class="font-head font-bold text-xl text-white mb-3">Frota própria</h3>
+          <p class="text-steel-400 leading-relaxed">Rotas semanais definidas percorrendo diversos municípios com pontualidade e agilidade.</p>
+        </div>
+        <div class="bg-steel-950 p-10">
+          <div class="w-12 h-12 grid place-items-center border border-molten/40 text-molten mb-6 font-mono">03</div>
+          <h3 class="font-head font-bold text-xl text-white mb-3">Corte sob medida</h3>
+          <p class="text-steel-400 leading-relaxed">Diversos tamanhos e espessuras com precisão, garantindo produtos que atendem ao seu projeto.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CATÁLOGO CTA ===================== -->
+    <section id="catalogo" class="relative bg-molten text-ink py-20 overflow-hidden">
+      <div class="absolute inset-0 grid-lines opacity-10 [--line:rgba(0,0,0,0.2)]"></div>
+      <div class="relative mx-auto max-w-[1400px] px-5 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-8" data-reveal>
+        <div>
+          <p class="font-mono text-xs tracking-[0.3em] uppercase mb-4">Conheça todos os nossos produtos</p>
+          <h2 class="font-display font-extrabold text-4xl lg:text-6xl leading-[0.95] tracking-tight">Baixe o nosso<br />catálogo completo</h2>
+        </div>
+        <a href="produtos.html" class="btn btn-dark text-base !px-8 !py-5">Baixar catálogo <span class="arrow">→</span></a>
+      </div>
+    </section>
+
+    <!-- ===================== ENTREGA ===================== -->
+    <section id="entrega" class="bg-ink py-24 lg:py-32">
+      <div class="mx-auto max-w-[1400px] px-5 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+        <div data-reveal="right">
+          <p class="eyebrow mb-5">Entrega</p>
+          <h2 class="font-display font-extrabold text-4xl lg:text-6xl text-white leading-[0.95] tracking-tight mb-8">
+            Frota própria,<br />rota semanal.
+          </h2>
+          <p class="text-steel-300 text-lg leading-relaxed mb-10">
+            A Perfil Metais conta com frota própria e sistema de rota semanal para regiões do
+            Rio Grande do Sul, Santa Catarina e Paraná, e no Centro-Oeste no estado de Mato Grosso.
+            Entre em contato com nossa central de vendas — será um prazer atender você!
+          </p>
+          <a href="contato.html" class="btn btn-primary">Falar com vendas <span class="arrow">→</span></a>
+        </div>
+        <div class="grid grid-cols-2 gap-px bg-steel-800 border border-steel-800" data-reveal-stagger>
+          <div class="bg-ink p-8 text-center">
+            <div class="font-display text-2xl font-extrabold text-white">RS</div>
+            <div class="font-mono text-[0.65rem] tracking-widest text-steel-400 mt-2">RIO GRANDE DO SUL</div>
+          </div>
+          <div class="bg-ink p-8 text-center">
+            <div class="font-display text-2xl font-extrabold text-white">SC</div>
+            <div class="font-mono text-[0.65rem] tracking-widest text-steel-400 mt-2">SANTA CATARINA</div>
+          </div>
+          <div class="bg-ink p-8 text-center">
+            <div class="font-display text-2xl font-extrabold text-white">PR</div>
+            <div class="font-mono text-[0.65rem] tracking-widest text-steel-400 mt-2">PARANÁ</div>
+          </div>
+          <div class="bg-ink p-8 text-center">
+            <div class="font-display text-2xl font-extrabold text-molten">MT</div>
+            <div class="font-mono text-[0.65rem] tracking-widest text-steel-400 mt-2">MATO GROSSO</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ORÇAMENTO CTA ===================== -->
+    <section class="relative py-28 overflow-hidden border-t border-steel-800">
+      <div class="absolute inset-0 img-fallback opacity-30">
+        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1600&q=80" onerror="this.style.display='none'" alt="" class="w-full h-full object-cover" />
+      </div>
+      <div class="absolute inset-0 bg-ink/80"></div>
+      <div class="relative mx-auto max-w-[1400px] px-5 lg:px-8 text-center" data-reveal>
+        <p class="eyebrow justify-center mb-6">Solicite seu orçamento</p>
+        <h2 class="font-display font-extrabold text-4xl lg:text-7xl text-white leading-[0.95] tracking-tight mb-8">
+          Vamos construir<br /><span class="text-gradient">o seu projeto?</span>
+        </h2>
+        <p class="text-steel-300 text-lg max-w-xl mx-auto mb-10">
+          Conte o que você precisa e nossa equipe retorna com a melhor solução em ferro e aço.
+        </p>
+        <a href="orcamento.html" class="btn btn-primary text-base !px-8 !py-5">Pedir orçamento agora <span class="arrow">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-steel-950 border-t border-steel-800 pt-20 pb-10">
+    <div class="mx-auto max-w-[1400px] px-5 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 pb-16 border-b border-steel-800">
+        <div class="lg:col-span-4">
+          <a href="index.html" class="flex items-center gap-3 mb-6">
+            <img src="assets/img/logo-branca.png" alt="Perfil Metais" class="h-14">
+          </a>
+          <p class="text-steel-400 leading-relaxed max-w-xs">Soluções confiáveis em ferro e aço. Conectando pessoas, projetos e progresso desde 1992.</p>
+          <div class="flex gap-3 mt-6">
+            <a href="orcamento.html" class="btn btn-primary !py-3 !px-5">Orçamento</a>
+            <a href="https://wa.me/5554999097467" class="btn btn-ghost !py-3 !px-5">WhatsApp</a>
+          </div>
+        </div>
+
+        <nav class="lg:col-span-2">
+          <h4 class="font-mono text-xs tracking-widest text-steel-500 mb-5">NAVEGAÇÃO</h4>
+          <ul class="space-y-3 text-steel-300">
+            <li><a href="index.html" class="hover:text-molten transition">Início</a></li>
+            <li><a href="empresa.html" class="hover:text-molten transition">A Empresa</a></li>
+            <li><a href="produtos.html" class="hover:text-molten transition">Produtos</a></li>
+            <li><a href="servicos.html" class="hover:text-molten transition">Serviços</a></li>
+            <li><a href="contato.html" class="hover:text-molten transition">Contato</a></li>
+          </ul>
+        </nav>
+
+        <div class="lg:col-span-3">
+          <h4 class="font-mono text-xs tracking-widest text-steel-500 mb-5">MATRIZ ERECHIM</h4>
+          <p class="text-steel-300 leading-relaxed text-sm">
+            Rua Germano Carlos Knapik, 260<br />Distrito Industrial, CEP 99706-402<br />Erechim — Rio Grande do Sul
+          </p>
+          <a href="mailto:vendasrs@perfilmetais.ind.br" class="block mt-4 text-molten text-sm hover:underline">vendasrs@perfilmetais.ind.br</a>
+          <p class="text-steel-400 text-sm mt-2">Fone/Whats: (54) 3861-3977</p>
+        </div>
+
+        <div class="lg:col-span-3">
+          <h4 class="font-mono text-xs tracking-widest text-steel-500 mb-5">FILIAIS</h4>
+          <ul class="space-y-3 text-steel-300 text-sm">
+            <li>Santa Maria — RS · (55) 3211-4029</li>
+            <li>Chapecó — SC · (49) 3328-7271</li>
+            <li>Lucas do Rio Verde — MT · (65) 3549-1533</li>
+          </ul>
+          <a href="contato.html" class="inline-block mt-4 font-mono text-xs text-molten hover:underline">VER TODAS AS UNIDADES →</a>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 font-mono text-xs text-steel-500">
+        <p>© <span data-year>2026</span> Perfil Metais — Soluções confiáveis em ferro e aço.</p>
+        <p>Proposta de identidade visual · Conceito industrial molten steel</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

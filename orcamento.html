@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solicite seu Orçamento — Perfil Metais</title>
+  <link rel="shortcut icon" href="https://www.perfilmetais.ind.br/favicon.ico" type="image/x-icon">
+  <meta name="description" content="Solicite seu orçamento de produtos em ferro e aço. Selecione o produto, informe seu estado e nossa equipe retorna com a melhor solução." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Expanded:wght@600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { ink:"#0a0c0f", steel:{950:"#0e1116",900:"#14181d",800:"#1b2026",700:"#262c34",600:"#353d47",500:"#5a6472",400:"#8b94a1",300:"#c2c8d0"}, molten:"#ff5a1f", molten2:"#ff7a32", spark:"#ffb020", paper:"#f5f3ef" },
+      fontFamily: { display:['"Archivo Expanded"','"Archivo"',"sans-serif"], head:['"Archivo"',"sans-serif"], sans:['"Manrope"',"system-ui","sans-serif"], mono:['"JetBrains Mono"',"monospace"] },
+    }}};
+  </script>
+  <style>
+    .field { background: var(--steel-900); border: 1px solid var(--line); color: #fff; }
+    .field:focus { border-color: var(--molten); outline: none; }
+    .field::placeholder { color: var(--steel-500); }
+    label .req { color: var(--molten); }
+    select.field option { background: #14181d; }
+  </style>
+</head>
+
+<body class="grain antialiased">
+
+  <header data-header class="site-header fixed top-0 inset-x-0 z-50 py-5 is-scrolled">
+    <div class="mx-auto max-w-[1400px] px-5 lg:px-8 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="assets/img/logo-branca.png" alt="Perfil Metais" class="h-14">
+      </a>
+      <nav class="hidden lg:flex items-center gap-9 font-mono text-[0.78rem] tracking-wide text-steel-300">
+        <a href="index.html" class="nav-link">Início</a>
+        <a href="empresa.html" class="nav-link">A Empresa</a>
+        <a href="produtos.html" class="nav-link">Produtos</a>
+        <a href="servicos.html" class="nav-link">Serviços</a>
+        <a href="contato.html" class="nav-link">Contato</a>
+      </nav>
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="https://wa.me/5554999097467" target="_blank" rel="noopener" class="btn btn-ghost">WhatsApp</a>
+        <a href="orcamento.html" class="btn btn-primary">Orçamento <span class="arrow">→</span></a>
+      </div>
+      <button data-burger aria-label="Abrir menu" aria-expanded="false" class="lg:hidden relative w-10 h-10 grid place-items-center text-white"><span class="block w-6 h-px bg-white mb-1.5"></span><span class="block w-6 h-px bg-white"></span><span class="block w-6 h-px bg-white mt-1.5"></span></button>
+    </div>
+  </header>
+
+  <div data-mobile-menu data-open="false" class="mobile-menu fixed inset-0 z-40 bg-ink/97 backdrop-blur-lg lg:hidden flex flex-col">
+    <div class="grid-lines absolute inset-0 opacity-40"></div>
+    <div class="relative flex flex-col justify-center flex-1 px-8 gap-2">
+      <a href="index.html" class="font-display text-4xl font-extrabold text-steel-400 py-2 border-b border-steel-800">Início</a>
+      <a href="empresa.html" class="font-display text-4xl font-extrabold text-steel-400 py-2 border-b border-steel-800">A Empresa</a>
+      <a href="produtos.html" class="font-display text-4xl font-extrabold text-steel-400 py-2 border-b border-steel-800">Produtos</a>
+      <a href="servicos.html" class="font-display text-4xl font-extrabold text-steel-400 py-2 border-b border-steel-800">Serviços</a>
+      <a href="contato.html" class="font-display text-4xl font-extrabold text-steel-400 py-2 border-b border-steel-800">Contato</a>
+      <div class="flex gap-3 mt-8"><a href="orcamento.html" class="btn btn-primary flex-1 justify-center">Orçamento</a><a href="https://wa.me/5554999097467" class="btn btn-ghost flex-1 justify-center">WhatsApp</a></div>
+    </div>
+  </div>
+
+  <main>
+    <section class="relative pt-44 pb-20 overflow-hidden border-b border-steel-800">
+      <div class="absolute inset-0 grid-lines opacity-20"></div>
+      <div class="absolute inset-0 radial-glow"></div>
+      <div class="relative mx-auto max-w-[1400px] px-5 lg:px-8">
+        <p class="eyebrow mb-6" data-reveal>Solicite seu orçamento</p>
+        <h1 class="display-xl text-white text-[12vw] lg:text-[6rem]" data-reveal>Vamos<br /><span class="text-gradient">orçar?</span></h1>
+        <p class="mt-6 max-w-2xl text-steel-300 text-lg leading-relaxed" data-reveal>Selecione um produto, informe seu estado e conte o que você precisa. Logo entraremos em contato com a melhor solução em ferro e aço.</p>
+      </div>
+    </section>
+
+    <section class="bg-steel-950 py-20 lg:py-28">
+      <div class="mx-auto max-w-[1400px] px-5 lg:px-8 grid lg:grid-cols-12 gap-12">
+        <!-- FORM -->
+        <div class="lg:col-span-7" data-reveal="right">
+          <form class="space-y-6" onsubmit="event.preventDefault(); this.querySelector('[data-feedback]').classList.remove('hidden'); this.reset();">
+            <div class="grid sm:grid-cols-2 gap-6">
+              <div>
+                <label class="font-mono text-xs tracking-widest text-steel-400 mb-2 block">PRODUTO <span class="req">*</span></label>
+                <select required class="field w-full px-4 py-3.5 rounded-[2px]">
+                  <option value="">Selecione um produto</option>
+                  <option>Acessórios</option><option>ACM</option><option>Bobinas</option><option>Calhas</option>
+                  <option>Chapas</option><option>Ferramentas</option><option>Inox</option><option>Laminados</option>
+                  <option>Perfil Especial</option><option>Perfil Estrutural</option><option>Perfil Perfilado</option>
+                  <option>Telhas</option><option>Tubos</option>
+                </select>
+              </div>
+              <div>
+                <label class="font-mono text-xs tracking-widest text-steel-400 mb-2 block">ESTADO <span class="req">*</span></label>
+                <select required class="field w-full px-4 py-3.5 rounded-[2px]">
+                  <option value="">Selecione o estado</option>
+                  <option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option>
+                  <option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option>
+                  <option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option>
+                  <option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
+                  <option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option>
+                  <option>SE</option><option>TO</option>
+                </select>
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-6">
+              <div><label class="font-mono text-xs tracking-widest text-steel-400 mb-2 block">NOME <span class="req">*</span></label><input required type="text" placeholder="Seu nome" class="field w-full px-4 py-3.5 rounded-[2px]" /></div>
+              <div><label class="font-mono text-xs tracking-widest text-steel-400 mb-2 block">EMPRESA</label><input type="text" placeholder="Nome da empresa" class="field w-full px-4 py-3.5 rounded-[2px]" /></div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-6">
+              <div><label class="font-mono text-xs tracking-widest text-steel-400 mb-2 block">E-MAIL <span class="req">*</span></label><input required type="email" placeholder="voce@email.com" class="field w-full px-4 py-3.5 rounded-[2px]" /></div>
+              <div><label class="font-mono text-xs tracking-widest text-steel-400 mb-2 block">TELEFONE / WHATSAPP <span class="req">*</span></label><input required type="tel" placeholder="(00) 00000-0000" class="field w-full px-4 py-3.5 rounded-[2px]" /></div>
+            </div>
+            <div><label class="font-mono text-xs tracking-widest text-steel-400 mb-2 block">DETALHES DO PEDIDO</label><textarea rows="5" placeholder="Quantidade, medidas, espessura, prazo..." class="field w-full px-4 py-3.5 rounded-[2px] resize-none"></textarea></div>
+            <label class="flex items-start gap-3 text-sm text-steel-400"><input type="checkbox" required class="mt-1 accent-molten" /> <span>Ao informar meus dados, eu concordo com a Política de Privacidade.</span></label>
+            <button type="submit" class="btn btn-primary text-base !px-8 !py-4">Enviar pedido <span class="arrow">→</span></button>
+            <p data-feedback class="hidden font-mono text-sm text-molten border border-molten/40 px-4 py-3 rounded-[2px]">✓ Pedido registrado (demonstração). No site final, este formulário enviará para a central de vendas.</p>
+          </form>
+        </div>
+
+        <!-- ASIDE -->
+        <aside class="lg:col-span-5 space-y-4" data-reveal="left">
+          <div class="card-line p-8">
+            <h3 class="font-head font-bold text-xl text-white mb-4">Prefere falar agora?</h3>
+            <p class="text-steel-400 mb-6">Nossa central de vendas atende com agilidade pelo telefone e WhatsApp.</p>
+            <a href="https://wa.me/5554999097467" class="btn btn-primary w-full justify-center">Chamar no WhatsApp</a>
+          </div>
+          <div class="card-line p-8">
+            <h4 class="font-mono text-xs tracking-widest text-steel-500 mb-4">VENDAS POR REGIÃO</h4>
+            <ul class="space-y-3 text-steel-300 text-sm">
+              <li class="flex justify-between gap-4"><span>RS — Erechim</span><a href="mailto:vendasrs@perfilmetais.ind.br" class="text-molten hover:underline">vendasrs@</a></li>
+              <li class="flex justify-between gap-4"><span>RS — Santa Maria</span><a href="mailto:vendassm@perfilmetais.ind.br" class="text-molten hover:underline">vendassm@</a></li>
+              <li class="flex justify-between gap-4"><span>SC — Chapecó</span><a href="mailto:vendassc@perfilmetais.ind.br" class="text-molten hover:underline">vendassc@</a></li>
+              <li class="flex justify-between gap-4"><span>MT — Lucas do Rio Verde</span><a href="mailto:vendasmt@perfilmetais.ind.br" class="text-molten hover:underline">vendasmt@</a></li>
+            </ul>
+          </div>
+          <div class="bg-molten text-ink p-8 rounded-[2px]">
+            <p class="font-display font-extrabold text-2xl leading-tight">Frota própria e<br />rota semanal.</p>
+            <p class="font-mono text-xs mt-3 opacity-80">RS · SC · PR · MT</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-steel-950 border-t border-steel-800 pt-20 pb-10">
+    <div class="mx-auto max-w-[1400px] px-5 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 pb-16 border-b border-steel-800">
+        <div class="lg:col-span-4">
+          <a href="index.html" class="flex items-center gap-3 mb-6"><img src="assets/img/logo-branca.png" alt="Perfil Metais" class="h-14"></a>
+          <p class="text-steel-400 leading-relaxed max-w-xs">Soluções confiáveis em ferro e aço. Conectando pessoas, projetos e progresso desde 1992.</p>
+        </div>
+        <nav class="lg:col-span-2"><h4 class="font-mono text-xs tracking-widest text-steel-500 mb-5">NAVEGAÇÃO</h4><ul class="space-y-3 text-steel-300"><li><a href="index.html" class="hover:text-molten transition">Início</a></li><li><a href="empresa.html" class="hover:text-molten transition">A Empresa</a></li><li><a href="produtos.html" class="hover:text-molten transition">Produtos</a></li><li><a href="servicos.html" class="hover:text-molten transition">Serviços</a></li><li><a href="contato.html" class="hover:text-molten transition">Contato</a></li></ul></nav>
+        <div class="lg:col-span-3"><h4 class="font-mono text-xs tracking-widest text-steel-500 mb-5">MATRIZ ERECHIM</h4><p class="text-steel-300 leading-relaxed text-sm">Rua Germano Carlos Knapik, 260<br />Distrito Industrial, CEP 99706-402<br />Erechim — Rio Grande do Sul</p><a href="mailto:vendasrs@perfilmetais.ind.br" class="block mt-4 text-molten text-sm hover:underline">vendasrs@perfilmetais.ind.br</a><p class="text-steel-400 text-sm mt-2">Fone/Whats: (54) 3861-3977</p></div>
+        <div class="lg:col-span-3"><h4 class="font-mono text-xs tracking-widest text-steel-500 mb-5">FILIAIS</h4><ul class="space-y-3 text-steel-300 text-sm"><li>Santa Maria — RS · (55) 3211-4029</li><li>Chapecó — SC · (49) 3328-7271</li><li>Lucas do Rio Verde — MT · (65) 3549-1533</li></ul><a href="contato.html" class="inline-block mt-4 font-mono text-xs text-molten hover:underline">VER TODAS AS UNIDADES →</a></div>
+      </div>
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 font-mono text-xs text-steel-500"><p>© <span data-year>2026</span> Perfil Metais — Soluções confiáveis em ferro e aço.</p><p>Proposta de identidade visual · Conceito industrial molten steel</p></div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

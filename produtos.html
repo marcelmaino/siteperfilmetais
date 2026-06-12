@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produtos — Perfil Metais</title>
+  <link rel="shortcut icon" href="https://www.perfilmetais.ind.br/favicon.ico" type="image/x-icon">
+  <meta name="description" content="Linha completa em ferro e aço: acessórios, ACM, bobinas, calhas, chapas, inox, laminados, perfis especiais, estruturais e perfilados, telhas e tubos." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Expanded:wght@600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { ink:"#0a0c0f", steel:{950:"#0e1116",900:"#14181d",800:"#1b2026",700:"#262c34",600:"#353d47",500:"#5a6472",400:"#8b94a1",300:"#c2c8d0"}, molten:"#ff5a1f", molten2:"#ff7a32", spark:"#ffb020", paper:"#f5f3ef" },
+      fontFamily: { display:['"Archivo Expanded"','"Archivo"',"sans-serif"], head:['"Archivo"',"sans-serif"], sans:['"Manrope"',"system-ui","sans-serif"], mono:['"JetBrains Mono"',"monospace"] },
+    }}};
+  </script>
+</head>
+
+<body class="grain antialiased">
+
+  <header data-header class="site-header fixed top-0 inset-x-0 z-50 py-5 is-scrolled">
+    <div class="mx-auto max-w-[1400px] px-5 lg:px-8 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="assets/img/logo-branca.png" alt="Perfil Metais" class="h-14">
+      </a>
+      <nav class="hidden lg:flex items-center gap-9 font-mono text-[0.78rem] tracking-wide text-steel-300">
+        <a href="index.html" class="nav-link">Início</a>
+        <a href="empresa.html" class="nav-link">A Empresa</a>
+        <a href="produtos.html" class="nav-link is-active">Produtos</a>
+        <a href="servicos.html" class="nav-link">Serviços</a>
+        <a href="contato.html" class="nav-link">Contato</a>
+      </nav>
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="https://wa.me/5554999097467" target="_blank" rel="noopener" class="btn btn-ghost">WhatsApp</a>
+        <a href="orcamento.html" class="btn btn-primary">Orçamento <span class="arrow">→</span></a>
+      </div>
+      <button data-burger aria-label="Abrir menu" aria-expanded="false" class="lg:hidden relative w-10 h-10 grid place-items-center text-white"><span class="block w-6 h-px bg-white mb-1.5"></span><span class="block w-6 h-px bg-white"></span><span class="block w-6 h-px bg-white mt-1.5"></span></button>
+    </div>
+  </header>
+
+  <div data-mobile-menu data-open="false" class="mobile-menu fixed inset-0 z-40 bg-ink/97 backdrop-blur-lg lg:hidden flex flex-col">
+    <div class="grid-lines absolute inset-0 opacity-40"></div>
+    <div class="relative flex flex-col justify-center flex-1 px-8 gap-2">
+      <a href="index.html" class="font-display text-4xl font-extrabold text-steel-400 py-2 border-b border-steel-800">Início</a>
+      <a href="empresa.html" class="font-display text-4xl font-extrabold text-steel-400 py-2 border-b border-steel-800">A Empresa</a>
+      <a href="produtos.html" class="font-display text-4xl font-extrabold text-white py-2 border-b border-steel-800">Produtos</a>
+      <a href="servicos.html" class="font-display text-4xl font-extrabold text-steel-400 py-2 border-b border-steel-800">Serviços</a>
+      <a href="contato.html" class="font-display text-4xl font-extrabold text-steel-400 py-2 border-b border-steel-800">Contato</a>
+      <div class="flex gap-3 mt-8"><a href="orcamento.html" class="btn btn-primary flex-1 justify-center">Orçamento</a><a href="https://wa.me/5554999097467" class="btn btn-ghost flex-1 justify-center">WhatsApp</a></div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="relative pt-44 pb-20 overflow-hidden border-b border-steel-800">
+      <div class="absolute inset-0 grid-lines opacity-20"></div>
+      <div class="absolute inset-0 radial-glow"></div>
+      <div class="relative mx-auto max-w-[1400px] px-5 lg:px-8 flex flex-wrap items-end justify-between gap-8">
+        <div>
+          <p class="eyebrow mb-6" data-reveal>Catálogo</p>
+          <h1 class="display-xl text-white text-[12vw] lg:text-[6rem]" data-reveal>Produtos</h1>
+          <p class="mt-6 max-w-xl text-steel-300 text-lg leading-relaxed" data-reveal>Tubos, laminados, chapas, calhas, acessórios e perfis estruturais — abastecemos o mercado com metais diversificados ao gosto do cliente.</p>
+        </div>
+        <a href="orcamento.html" class="btn btn-primary" data-reveal>Solicitar orçamento <span class="arrow">→</span></a>
+      </div>
+    </section>
+
+    <!-- GRID DE PRODUTOS -->
+    <section class="bg-steel-950 py-20 lg:py-28">
+      <div class="mx-auto max-w-[1400px] px-5 lg:px-8">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4" data-reveal-stagger>
+
+          <a href="produto.html?p=acessorios" class="product-card group block aspect-square img-fallback">
+            <img src="https://www.perfilmetais.ind.br/painel/admin/upload/produtos/des_129_acessoriosI.png" onerror="this.style.display='none'" alt="Acessórios" class="absolute inset-0 w-full h-full object-cover opacity-55" />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/25 to-transparent"></div>
+            <div class="relative h-full flex flex-col justify-between p-6"><span class="font-mono text-xs text-molten">01</span><div><h3 class="font-display font-bold text-2xl text-white">Acessórios</h3><span class="font-mono text-xs text-steel-400 group-hover:text-molten transition">Ver produto →</span></div></div>
+          </a>
+
+          <a href="produto.html?p=acm" class="product-card group block aspect-square img-fallback">
+            <img src="https://www.perfilmetais.ind.br/painel/admin/upload/produtos/des_137_acm.jpg" onerror="this.style.display='none'" alt="ACM" class="absolute inset-0 w-full h-full object-cover opacity-50" />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/25 to-transparent"></div>
+            <div class="relative h-full flex flex-col justify-between p-6"><span class="font-mono text-xs text-molten">02</span><div><h3 class="font-display font-bold text-2xl text-white">ACM</h3><span class="font-mono text-xs text-steel-400 group-hover:text-molten transition">Ver produto →</span></div></div>
+          </a>
+
+          <a href="produto.html?p=bobinas" class="product-card group block aspect-square img-fallback">
+            <img src="https://www.perfilmetais.ind.br/painel/admin/upload/produtos/des_130_bobinas.jpg" onerror="this.style.display='none'" alt="Bobinas" class="absolute inset-0 w-full h-full object-cover opacity-55" />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/25 to-transparent"></div>
+            <div class="relative h-full flex flex-col justify-between p-6"><span class="font-mono text-xs text-molten">03</span><div><h3 class="font-display font-bold text-2xl text-white">Bobinas</h3><span class="font-mono text-xs text-steel-400 group-hover:text-molten transition">Ver produto →</span></div></div>
+          </a>
+
+          <a href="produto.html?p=calhas" class="product-card group block aspect-square img-fallback">
+            <img src="https://www.perfilmetais.ind.br/painel/admin/upload/produtos/des_131_calhas.jpg" onerror="this.style.display='none'" alt="Calhas" class="absolute inset-0 w-full h-full object-cover opacity-50" />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/25 to-transparent"></div>
+            <div class="relative h-full flex flex-col justify-between p-6"><span class="font-mono text-xs text-molten">04</span><div><h3 class="font-display font-bold text-2xl text-white">Calhas</h3><span class="font-mono text-xs text-steel-400 group-hover:text-molten transition">Ver produto →</span></div></div>
+          </a>
+
+          <a href="produto.html?p=chapas" class="product-card group block aspect-square img-fallback">
+            <img src="https://www.perfilmetais.ind.br/painel/admin/upload/produtos/des_132_chapas.jpg" onerror="this.style.display='none'" alt="Chapas" class="absolute inset-0 w-full h-full object-cover opacity-55" />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/25 to-transparent"></div>
+            <div class="relative h-full flex flex-col justify-between p-6"><span class="font-mono text-xs text-molten">05</span><div><h3 class="font-display font-bold text-2xl text-white">Chapas</h3><span class="font-mono text-xs text-steel-400 group-hover:text-molten transition">Ver produto →</span></div></div>
+          </a>
+
+          <a href="produto.html?p=inox" class="product-card group block aspect-square img-fallback">
+            <img src="https://www.perfilmetais.ind.br/painel/admin/upload/produtos/des_138_p_tubos-de-aco-inox-11.jpg" onerror="this.style.display='none'" alt="Inox" class="absolute inset-0 w-full h-full object-cover opacity-55" />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/25 to-transparent"></div>
+            <div class="relative h-full flex flex-col justify-between p-6"><span class="font-mono text-xs text-molten">06</span><div><h3 class="font-display font-bold text-2xl text-white">Inox</h3><span class="font-mono text-xs text-steel-400 group-hover:text-molten transition">Ver produto →</span></div></div>
+          </a>
+
+          <a href="produto.html?p=laminados" class="product-card group block aspect-square img-fallback">
+            <img src="https://www.perfilmetais.ind.br/painel/admin/upload/produtos/des_133_laminados.jpg" onerror="this.style.display='none'" alt="Laminados" class="absolute inset-0 w-full h-full object-cover opacity-50" />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/25 to-transparent"></div>
+            <div class="relative h-full flex flex-col justify-between p-6"><span class="font-mono text-xs text-molten">07</span><div><h3 class="font-display font-bold text-2xl text-white">Laminados</h3><span class="font-mono text-xs text-steel-400 group-hover:text-molten transition">Ver produto →</span></div></div>
+          </a>
+
+          <a href="produto.html?p=perfil-especial" class="product-card group block aspect-square img-fallback">
+            <img src="https://www.perfilmetais.ind.br/painel/admin/upload/produtos/des_134_perfilespecial.jpg" onerror="this.style.display='none'" alt="Perfil Especial" class="absolute inset-0 w-full h-full object-cover opacity-45" />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/25 to-transparent"></div>
+            <div class="relative h-full flex flex-col justify-between p-6"><span class="font-mono text-xs text-molten">08</span><div><h3 class="font-display font-bold text-2xl text-white">Perfil Especial</h3><span class="font-mono text-xs text-steel-400 group-hover:text-molten transition">Ver produto →</span></div></div>
+          </a>
+
+          <a href="produto.html?p=perfil-estrutural" class="product-card group block aspect-square img-fallback">
+            <img src="https://www.perfilmetais.ind.br/painel/admin/upload/produtos/des_135_estrutural.jpg" onerror="this.style.display='none'" alt="Perfil Estrutural" class="absolute inset-0 w-full h-full object-cover opacity-50" />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/25 to-transparent"></div>
+            <div class="relative h-full flex flex-col justify-between p-6"><span class="font-mono text-xs text-molten">09</span><div><h3 class="font-display font-bold text-2xl text-white">Perfil Estrutural</h3><span class="font-mono text-xs text-steel-400 group-hover:text-molten transition">Ver produto →</span></div></div>
+          </a>
+
+          <a href="produto.html?p=perfil-perfilado" class="product-card group block aspect-square img-fallback">
+            <img src="https://www.perfilmetais.ind.br/painel/admin/upload/produtos/des_136_perfilados.jpg" onerror="this.style.display='none'" alt="Perfil Perfilado" class="absolute inset-0 w-full h-full object-cover opacity-50" />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/25 to-transparent"></div>
+            <div class="relative h-full flex flex-col justify-between p-6"><span class="font-mono text-xs text-molten">10</span><div><h3 class="font-display font-bold text-2xl text-white">Perfil Perfilado</h3><span class="font-mono text-xs text-steel-400 group-hover:text-molten transition">Ver produto →</span></div></div>
+          </a>
+
+          <a href="produto.html?p=telhas" class="product-card group block aspect-square img-fallback">
+            <img src="https://www.perfilmetais.ind.br/painel/admin/upload/produtos/des_139_TELHAS03.jpg" onerror="this.style.display='none'" alt="Telhas" class="absolute inset-0 w-full h-full object-cover opacity-50" />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/25 to-transparent"></div>
+            <div class="relative h-full flex flex-col justify-between p-6"><span class="font-mono text-xs text-molten">11</span><div><h3 class="font-display font-bold text-2xl text-white">Telhas</h3><span class="font-mono text-xs text-steel-400 group-hover:text-molten transition">Ver produto →</span></div></div>
+          </a>
+
+          <a href="produto.html?p=tubos" class="product-card group block aspect-square img-fallback">
+            <img src="https://www.perfilmetais.ind.br/painel/admin/upload/produtos/des_126_tubos2.jpg" onerror="this.style.display='none'" alt="Tubos" class="absolute inset-0 w-full h-full object-cover opacity-55" />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/25 to-transparent"></div>
+            <div class="relative h-full flex flex-col justify-between p-6"><span class="font-mono text-xs text-molten">12</span><div><h3 class="font-display font-bold text-2xl text-white">Tubos</h3><span class="font-mono text-xs text-steel-400 group-hover:text-molten transition">Ver produto →</span></div></div>
+          </a>
+
+          <a href="produto.html?p=telhas-metalicas" class="product-card group block aspect-square img-fallback">
+            <img src="https://www.perfilmetais.ind.br/painel/admin/upload/produtos/des_139_TELHAS03.jpg" onerror="this.style.display='none'" alt="Telhas Metálicas" class="absolute inset-0 w-full h-full object-cover opacity-50" />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/25 to-transparent"></div>
+            <div class="relative h-full flex flex-col justify-between p-6"><span class="font-mono text-xs text-molten">13</span><div><h3 class="font-display font-bold text-2xl text-white">Telhas Metálicas</h3><span class="font-mono text-xs text-steel-400 group-hover:text-molten transition">Ver produto →</span></div></div>
+          </a>
+
+          <a href="produto.html?p=corte-laser-oxicorte" class="product-card group block aspect-square img-fallback">
+            <img src="https://www.perfilmetais.ind.br/painel/admin/upload/produtos/des_132_chapas.jpg" onerror="this.style.display='none'" alt="Corte a Laser e Oxicorte" class="absolute inset-0 w-full h-full object-cover opacity-55" />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/25 to-transparent"></div>
+            <div class="relative h-full flex flex-col justify-between p-6"><span class="font-mono text-xs text-molten">14</span><div><h3 class="font-display font-bold text-2xl text-white">Corte a Laser e Oxicorte</h3><span class="font-mono text-xs text-steel-400 group-hover:text-molten transition">Ver produto →</span></div></div>
+          </a>
+
+          <a href="produto.html?p=dobras-chapas" class="product-card group block aspect-square img-fallback">
+            <img src="https://www.perfilmetais.ind.br/painel/admin/upload/produtos/des_135_estrutural.jpg" onerror="this.style.display='none'" alt="Dobras de Chapas" class="absolute inset-0 w-full h-full object-cover opacity-55" />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/25 to-transparent"></div>
+            <div class="relative h-full flex flex-col justify-between p-6"><span class="font-mono text-xs text-molten">15</span><div><h3 class="font-display font-bold text-2xl text-white">Dobras de Chapas</h3><span class="font-mono text-xs text-steel-400 group-hover:text-molten transition">Ver produto →</span></div></div>
+          </a>
+
+          <a href="produto.html?p=produtos-gaveta" class="product-card group block aspect-square img-fallback">
+            <img src="https://www.perfilmetais.ind.br/painel/admin/upload/produtos/des_129_acessoriosI.png" onerror="this.style.display='none'" alt="Produtos de Gaveta" class="absolute inset-0 w-full h-full object-cover opacity-55" />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/25 to-transparent"></div>
+            <div class="relative h-full flex flex-col justify-between p-6"><span class="font-mono text-xs text-molten">16</span><div><h3 class="font-display font-bold text-2xl text-white">Produtos de Gaveta</h3><span class="font-mono text-xs text-steel-400 group-hover:text-molten transition">Ver produto →</span></div></div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO CTA -->
+    <section class="relative bg-molten text-ink py-20 overflow-hidden">
+      <div class="absolute inset-0 grid-lines opacity-10 [--line:rgba(0,0,0,0.2)]"></div>
+      <div class="relative mx-auto max-w-[1400px] px-5 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-8" data-reveal>
+        <div>
+          <p class="font-mono text-xs tracking-[0.3em] uppercase mb-4">Conheça os nossos produtos</p>
+          <h2 class="font-display font-extrabold text-4xl lg:text-6xl leading-[0.95] tracking-tight">Clique aqui e baixe<br />o nosso catálogo</h2>
+        </div>
+        <a href="contato.html" class="btn btn-dark text-base !px-8 !py-5">Baixar catálogo <span class="arrow">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-steel-950 border-t border-steel-800 pt-20 pb-10">
+    <div class="mx-auto max-w-[1400px] px-5 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 pb-16 border-b border-steel-800">
+        <div class="lg:col-span-4">
+          <a href="index.html" class="flex items-center gap-3 mb-6">
+            <img src="assets/img/logo-branca.png" alt="Perfil Metais" class="h-14">
+          </a>
+          <p class="text-steel-400 leading-relaxed max-w-xs">Soluções confiáveis em ferro e aço. Conectando pessoas, projetos e progresso desde 1992.</p>
+        </div>
+        <nav class="lg:col-span-2"><h4 class="font-mono text-xs tracking-widest text-steel-500 mb-5">NAVEGAÇÃO</h4><ul class="space-y-3 text-steel-300"><li><a href="index.html" class="hover:text-molten transition">Início</a></li><li><a href="empresa.html" class="hover:text-molten transition">A Empresa</a></li><li><a href="produtos.html" class="hover:text-molten transition">Produtos</a></li><li><a href="servicos.html" class="hover:text-molten transition">Serviços</a></li><li><a href="contato.html" class="hover:text-molten transition">Contato</a></li></ul></nav>
+        <div class="lg:col-span-3"><h4 class="font-mono text-xs tracking-widest text-steel-500 mb-5">MATRIZ ERECHIM</h4><p class="text-steel-300 leading-relaxed text-sm">Rua Germano Carlos Knapik, 260<br />Distrito Industrial, CEP 99706-402<br />Erechim — Rio Grande do Sul</p><a href="mailto:vendasrs@perfilmetais.ind.br" class="block mt-4 text-molten text-sm hover:underline">vendasrs@perfilmetais.ind.br</a><p class="text-steel-400 text-sm mt-2">Fone/Whats: (54) 3861-3977</p></div>
+        <div class="lg:col-span-3"><h4 class="font-mono text-xs tracking-widest text-steel-500 mb-5">FILIAIS</h4><ul class="space-y-3 text-steel-300 text-sm"><li>Santa Maria — RS · (55) 3211-4029</li><li>Chapecó — SC · (49) 3328-7271</li><li>Lucas do Rio Verde — MT · (65) 3549-1533</li></ul><a href="contato.html" class="inline-block mt-4 font-mono text-xs text-molten hover:underline">VER TODAS AS UNIDADES →</a></div>
+      </div>
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 font-mono text-xs text-steel-500"><p>© <span data-year>2026</span> Perfil Metais — Soluções confiáveis em ferro e aço.</p><p>Proposta de identidade visual · Conceito industrial molten steel</p></div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

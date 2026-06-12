@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serviços — Perfil Metais</title>
+  <link rel="shortcut icon" href="https://www.perfilmetais.ind.br/favicon.ico" type="image/x-icon">
+  <meta name="description" content="Corte a laser, corte a plasma e oxicorte, corte e dobra de chapas, calandra, metaleira e desbobinamento. Transformação de metais com precisão industrial." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Expanded:wght@600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { ink:"#0a0c0f", steel:{950:"#0e1116",900:"#14181d",800:"#1b2026",700:"#262c34",600:"#353d47",500:"#5a6472",400:"#8b94a1",300:"#c2c8d0"}, molten:"#ff5a1f", molten2:"#ff7a32", spark:"#ffb020", paper:"#f5f3ef" },
+      fontFamily: { display:['"Archivo Expanded"','"Archivo"',"sans-serif"], head:['"Archivo"',"sans-serif"], sans:['"Manrope"',"system-ui","sans-serif"], mono:['"JetBrains Mono"',"monospace"] },
+    }}};
+  </script>
+</head>
+
+<body class="grain antialiased">
+
+  <header data-header class="site-header fixed top-0 inset-x-0 z-50 py-5 is-scrolled">
+    <div class="mx-auto max-w-[1400px] px-5 lg:px-8 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="assets/img/logo-branca.png" alt="Perfil Metais" class="h-14">
+      </a>
+      <nav class="hidden lg:flex items-center gap-9 font-mono text-[0.78rem] tracking-wide text-steel-300">
+        <a href="index.html" class="nav-link">Início</a>
+        <a href="empresa.html" class="nav-link">A Empresa</a>
+        <a href="produtos.html" class="nav-link">Produtos</a>
+        <a href="servicos.html" class="nav-link is-active">Serviços</a>
+        <a href="contato.html" class="nav-link">Contato</a>
+      </nav>
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="https://wa.me/5554999097467" target="_blank" rel="noopener" class="btn btn-ghost">WhatsApp</a>
+        <a href="orcamento.html" class="btn btn-primary">Orçamento <span class="arrow">→</span></a>
+      </div>
+      <button data-burger aria-label="Abrir menu" aria-expanded="false" class="lg:hidden relative w-10 h-10 grid place-items-center text-white"><span class="block w-6 h-px bg-white mb-1.5"></span><span class="block w-6 h-px bg-white"></span><span class="block w-6 h-px bg-white mt-1.5"></span></button>
+    </div>
+  </header>
+
+  <div data-mobile-menu data-open="false" class="mobile-menu fixed inset-0 z-40 bg-ink/97 backdrop-blur-lg lg:hidden flex flex-col">
+    <div class="grid-lines absolute inset-0 opacity-40"></div>
+    <div class="relative flex flex-col justify-center flex-1 px-8 gap-2">
+      <a href="index.html" class="font-display text-4xl font-extrabold text-steel-400 py-2 border-b border-steel-800">Início</a>
+      <a href="empresa.html" class="font-display text-4xl font-extrabold text-steel-400 py-2 border-b border-steel-800">A Empresa</a>
+      <a href="produtos.html" class="font-display text-4xl font-extrabold text-steel-400 py-2 border-b border-steel-800">Produtos</a>
+      <a href="servicos.html" class="font-display text-4xl font-extrabold text-white py-2 border-b border-steel-800">Serviços</a>
+      <a href="contato.html" class="font-display text-4xl font-extrabold text-steel-400 py-2 border-b border-steel-800">Contato</a>
+      <div class="flex gap-3 mt-8"><a href="orcamento.html" class="btn btn-primary flex-1 justify-center">Orçamento</a><a href="https://wa.me/5554999097467" class="btn btn-ghost flex-1 justify-center">WhatsApp</a></div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="relative pt-44 pb-20 overflow-hidden border-b border-steel-800" data-parallax-scope>
+      <div class="absolute inset-0 img-fallback opacity-25"><img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1600&q=80" onerror="this.style.display='none'" alt="" class="w-full h-full object-cover" data-parallax="0.12" /></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/85 to-ink"></div>
+      <div class="absolute inset-0 grid-lines opacity-20"></div>
+      <div class="relative mx-auto max-w-[1400px] px-5 lg:px-8">
+        <p class="eyebrow mb-6" data-reveal>Capacidade industrial</p>
+        <h1 class="display-xl text-white text-[12vw] lg:text-[6rem]" data-reveal>Serviços</h1>
+        <p class="mt-6 max-w-2xl text-steel-300 text-lg leading-relaxed" data-reveal>Capacidade de corte em escala industrial. Precisão e qualidade em corte, dobra e conformação de chapas — produtos personalizados para o seu projeto.</p>
+      </div>
+    </section>
+
+    <!-- LISTA DE SERVIÇOS -->
+    <section class="bg-ink py-20 lg:py-28">
+      <div class="mx-auto max-w-[1400px] px-5 lg:px-8 space-y-px bg-steel-800 border border-steel-800" data-reveal-stagger>
+
+        <article class="bg-ink grid lg:grid-cols-12 gap-8 p-8 lg:p-12 items-center group">
+          <div class="lg:col-span-1 font-display font-extrabold text-4xl text-steel-700 group-hover:text-molten transition">01</div>
+          <div class="lg:col-span-7">
+            <h2 class="font-display font-extrabold text-3xl lg:text-4xl text-white mb-3">Corte a Laser</h2>
+            <p class="text-steel-400 text-lg leading-relaxed">Precisão e qualidade no corte de chapas, com acabamento fino e alta repetibilidade — ideal para peças complexas e detalhadas conforme o seu desenho.</p>
+          </div>
+          <div class="lg:col-span-4 lg:text-right"><a href="orcamento.html" class="btn btn-ghost">Solicitar <span class="arrow">→</span></a></div>
+        </article>
+
+        <article class="bg-ink grid lg:grid-cols-12 gap-8 p-8 lg:p-12 items-center group">
+          <div class="lg:col-span-1 font-display font-extrabold text-4xl text-steel-700 group-hover:text-molten transition">02</div>
+          <div class="lg:col-span-7">
+            <h2 class="font-display font-extrabold text-3xl lg:text-4xl text-white mb-3">Corte a Plasma e Oxicorte</h2>
+            <p class="text-steel-400 text-lg leading-relaxed">Soluções para chapas de maior espessura, unindo produtividade e versatilidade no corte de aços carbono e estruturais.</p>
+          </div>
+          <div class="lg:col-span-4 lg:text-right"><a href="orcamento.html" class="btn btn-ghost">Solicitar <span class="arrow">→</span></a></div>
+        </article>
+
+        <article class="bg-ink grid lg:grid-cols-12 gap-8 p-8 lg:p-12 items-center group">
+          <div class="lg:col-span-1 font-display font-extrabold text-4xl text-steel-700 group-hover:text-molten transition">03</div>
+          <div class="lg:col-span-7">
+            <h2 class="font-display font-extrabold text-3xl lg:text-4xl text-white mb-3">Corte e Dobra de Chapas</h2>
+            <p class="text-steel-400 text-lg leading-relaxed">Trabalhamos com diversos tamanhos e espessuras com precisão, garantindo produtos de qualidade que atendem às exigências do seu projeto.</p>
+          </div>
+          <div class="lg:col-span-4 lg:text-right"><a href="orcamento.html" class="btn btn-ghost">Solicitar <span class="arrow">→</span></a></div>
+        </article>
+
+        <article class="bg-ink grid lg:grid-cols-12 gap-8 p-8 lg:p-12 items-center group">
+          <div class="lg:col-span-1 font-display font-extrabold text-4xl text-steel-700 group-hover:text-molten transition">04</div>
+          <div class="lg:col-span-7">
+            <h2 class="font-display font-extrabold text-3xl lg:text-4xl text-white mb-3">Calandra</h2>
+            <p class="text-steel-400 text-lg leading-relaxed">Conformação de chapas em formatos cilíndricos e curvos, para a fabricação de tubos, dutos e peças especiais sob medida.</p>
+          </div>
+          <div class="lg:col-span-4 lg:text-right"><a href="orcamento.html" class="btn btn-ghost">Solicitar <span class="arrow">→</span></a></div>
+        </article>
+
+        <article class="bg-ink grid lg:grid-cols-12 gap-8 p-8 lg:p-12 items-center group">
+          <div class="lg:col-span-1 font-display font-extrabold text-4xl text-steel-700 group-hover:text-molten transition">05</div>
+          <div class="lg:col-span-7">
+            <h2 class="font-display font-extrabold text-3xl lg:text-4xl text-white mb-3">Metaleira</h2>
+            <p class="text-steel-400 text-lg leading-relaxed">Fabricação própria de telhas metálicas sob medida e perfis especiais — um produto que valoriza, protege e embeleza o seu patrimônio.</p>
+          </div>
+          <div class="lg:col-span-4 lg:text-right"><a href="orcamento.html" class="btn btn-ghost">Solicitar <span class="arrow">→</span></a></div>
+        </article>
+
+        <article class="bg-ink grid lg:grid-cols-12 gap-8 p-8 lg:p-12 items-center group">
+          <div class="lg:col-span-1 font-display font-extrabold text-4xl text-steel-700 group-hover:text-molten transition">06</div>
+          <div class="lg:col-span-7">
+            <h2 class="font-display font-extrabold text-3xl lg:text-4xl text-white mb-3">Desbobinamento de Chapas</h2>
+            <p class="text-steel-400 text-lg leading-relaxed">Processamento de bobinas em chapas planas no comprimento desejado, otimizando o aproveitamento do material para a sua produção.</p>
+          </div>
+          <div class="lg:col-span-4 lg:text-right"><a href="orcamento.html" class="btn btn-ghost">Solicitar <span class="arrow">→</span></a></div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- DESTAQUE -->
+    <section class="bg-paper text-ink py-24 lg:py-28">
+      <div class="mx-auto max-w-[1400px] px-5 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+        <div data-reveal="right">
+          <p class="eyebrow mb-5">Capacidade de corte em escala industrial</p>
+          <h2 class="font-display font-extrabold text-3xl lg:text-5xl leading-tight tracking-tight mb-6">Investimos em qualidade e melhorias contínuas.</h2>
+          <p class="text-steel-600 text-lg leading-relaxed mb-6">Nós trabalhamos pensando no nosso futuro. Sustentabilidade é o nosso compromisso, e os produtos personalizados são feitos para o seu projeto — do desenho à entrega.</p>
+          <a href="orcamento.html" class="btn btn-dark">Solicitar orçamento <span class="arrow">→</span></a>
+        </div>
+        <div class="aspect-[4/3] img-fallback overflow-hidden" data-reveal="left">
+          <img src="https://images.unsplash.com/photo-1739010187523-b1eb815374d6?auto=format&fit=crop&w=1100&q=80" onerror="this.style.display='none'" alt="Corte e solda de precisão" class="w-full h-full object-cover" />
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="relative bg-molten text-ink py-20 overflow-hidden">
+      <div class="absolute inset-0 grid-lines opacity-10 [--line:rgba(0,0,0,0.2)]"></div>
+      <div class="relative mx-auto max-w-[1400px] px-5 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-8" data-reveal>
+        <h2 class="font-display font-extrabold text-3xl lg:text-5xl leading-[0.95] tracking-tight">Tem um projeto em mente?</h2>
+        <a href="orcamento.html" class="btn btn-dark text-base !px-8 !py-5">Pedir orçamento <span class="arrow">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-steel-950 border-t border-steel-800 pt-20 pb-10">
+    <div class="mx-auto max-w-[1400px] px-5 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 pb-16 border-b border-steel-800">
+        <div class="lg:col-span-4">
+          <a href="index.html" class="flex items-center gap-3 mb-6">
+            <img src="assets/img/logo-branca.png" alt="Perfil Metais" class="h-14">
+          </a>
+          <p class="text-steel-400 leading-relaxed max-w-xs">Soluções confiáveis em ferro e aço. Conectando pessoas, projetos e progresso desde 1992.</p>
+        </div>
+        <nav class="lg:col-span-2"><h4 class="font-mono text-xs tracking-widest text-steel-500 mb-5">NAVEGAÇÃO</h4><ul class="space-y-3 text-steel-300"><li><a href="index.html" class="hover:text-molten transition">Início</a></li><li><a href="empresa.html" class="hover:text-molten transition">A Empresa</a></li><li><a href="produtos.html" class="hover:text-molten transition">Produtos</a></li><li><a href="servicos.html" class="hover:text-molten transition">Serviços</a></li><li><a href="contato.html" class="hover:text-molten transition">Contato</a></li></ul></nav>
+        <div class="lg:col-span-3"><h4 class="font-mono text-xs tracking-widest text-steel-500 mb-5">MATRIZ ERECHIM</h4><p class="text-steel-300 leading-relaxed text-sm">Rua Germano Carlos Knapik, 260<br />Distrito Industrial, CEP 99706-402<br />Erechim — Rio Grande do Sul</p><a href="mailto:vendasrs@perfilmetais.ind.br" class="block mt-4 text-molten text-sm hover:underline">vendasrs@perfilmetais.ind.br</a><p class="text-steel-400 text-sm mt-2">Fone/Whats: (54) 3861-3977</p></div>
+        <div class="lg:col-span-3"><h4 class="font-mono text-xs tracking-widest text-steel-500 mb-5">FILIAIS</h4><ul class="space-y-3 text-steel-300 text-sm"><li>Santa Maria — RS · (55) 3211-4029</li><li>Chapecó — SC · (49) 3328-7271</li><li>Lucas do Rio Verde — MT · (65) 3549-1533</li></ul><a href="contato.html" class="inline-block mt-4 font-mono text-xs text-molten hover:underline">VER TODAS AS UNIDADES →</a></div>
+      </div>
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 font-mono text-xs text-steel-500"><p>© <span data-year>2026</span> Perfil Metais — Soluções confiáveis em ferro e aço.</p><p>Proposta de identidade visual · Conceito industrial molten steel</p></div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
