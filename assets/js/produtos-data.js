@@ -293,10 +293,10 @@ window.PRODUTOS = {
 
   "corte-laser-oxicorte": {
     num: "14",
-    name: "Corte a Laser e Oxicorte",
+    name: "Corte a Laser, Plasma e Oxicorte",
     tagline: "Precisão de corte para peças sob desenho.",
     intro:
-      "Serviço de corte a laser e oxicorte para transformar chapas em peças exatas conforme o seu projeto. Alta precisão para o laser e grande capacidade de espessura no oxicorte.",
+      "Serviço de corte a laser, plasma e oxicorte para transformar chapas em peças exatas conforme o seu projeto. Alta precisão no laser e grande capacidade de espessura no plasma e no oxicorte.",
     hero: IMG + "des_132_chapas.jpg",
     gallery: [
       IMG + "des_132_chapas.jpg",
@@ -304,8 +304,9 @@ window.PRODUTOS = {
       "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=900&q=80",
     ],
     specs: [
-      { label: "Processos", value: "Corte a laser (fibra) e oxicorte" },
+      { label: "Processos", value: "Corte a laser (fibra), plasma e oxicorte" },
       { label: "Espessura (laser)", value: "Até 20 mm" },
+      { label: "Espessura (plasma)", value: "Até 40 mm" },
       { label: "Espessura (oxicorte)", value: "Até 100 mm" },
       { label: "Materiais", value: "Aço carbono, inox e galvanizado" },
       { label: "Arquivos", value: "DXF / DWG conforme desenho" },
@@ -315,7 +316,7 @@ window.PRODUTOS = {
 
   "dobras-chapas": {
     num: "15",
-    name: "Dobras de Chapas",
+    name: "Corte e Dobra de Chapas",
     tagline: "Conformação precisa em diversas espessuras.",
     intro:
       "Corte e dobra de chapas com precisão para diversos tamanhos e espessuras. Entregamos a peça pronta e no formato exato, com furação e calandra para complementar.",

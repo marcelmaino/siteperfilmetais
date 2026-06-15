@@ -179,39 +179,6 @@
 
     /* recalcula posições após carregar fontes/imagens */
     window.addEventListener("load", () => ScrollTrigger.refresh());
-
-    /* ---------- 7. Cursor custom (desktop only) ---------- */
-    const mm = gsap.matchMedia();
-    mm.add("(min-width: 1025px) and (pointer: fine)", () => {
-      const dot = document.createElement("div");
-      const ring = document.createElement("div");
-      dot.className = "cursor-dot";
-      ring.className = "cursor-ring";
-      document.body.appendChild(dot);
-      document.body.appendChild(ring);
-
-      const xTo = gsap.quickTo(ring, "x", { duration: 0.4, ease: "power3" });
-      const yTo = gsap.quickTo(ring, "y", { duration: 0.4, ease: "power3" });
-
-      const move = (e) => {
-        gsap.set(dot, { x: e.clientX, y: e.clientY });
-        xTo(e.clientX);
-        yTo(e.clientY);
-      };
-      window.addEventListener("mousemove", move);
-
-      const hoverEls = document.querySelectorAll("a, button, [data-cursor]");
-      hoverEls.forEach((el) => {
-        el.addEventListener("mouseenter", () => ring.classList.add("is-hover"));
-        el.addEventListener("mouseleave", () => ring.classList.remove("is-hover"));
-      });
-
-      return () => {
-        window.removeEventListener("mousemove", move);
-        dot.remove();
-        ring.remove();
-      };
-    });
   } else {
     /* Sem GSAP: garante que tudo fique visível */
     document.documentElement.classList.remove("js");
